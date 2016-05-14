@@ -261,7 +261,7 @@ void collectSensorData(uint8_t sensorIndex){
   case SENSOR_INDEX_BAROMETER:
     /* Read BMP180 */
     BMP180_Read();
-    sensorDataInt[SENSOR_INDEX_BAROMETER] = 0;
+    sensorDataInt[SENSOR_INDEX_BAROMETER] = int(Pres);
     sensorDataLength[sensorIndex]=sprintf(sensorData[sensorIndex],"{\"value\":%d}", int(Pres));
     break;
 
